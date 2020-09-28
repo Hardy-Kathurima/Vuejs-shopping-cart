@@ -56,7 +56,21 @@ const app = new Vue({
     };
   },
   computed: {
+    totalItem: function () {
+      let sum = 0;
+      for (let i = 0; i < this.meals.length; i++) {
+        sum += (parseFloat(this.meals[i].price) * parseFloat(this.meals[i].quantity));
+      }
 
+      return sum;
+    },
+    totalCost() {
+      return this.meals.reduce(
+        (cost, meal) => cost + meal.price,
+        0
+      );
+
+    },
     cart() {
       return this.meals.filter(meal => meal.quantity > 0);
     },
@@ -90,5 +104,6 @@ $(document).ready(function () {
     hover: false,
     coverTrigger: false
   });
+  $('.modal').modal();
 
 });

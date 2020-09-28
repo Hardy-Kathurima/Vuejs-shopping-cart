@@ -22,12 +22,12 @@
             <div class="navbar-fixed">
             <!-- Dropdown Structure -->
             
-                <ul  id="dropdown1" class="dropdown-content collection">
+                <!-- <ul  id="dropdown1" class="dropdown-content collection">
                     <li class="collection-item" v-for="meal in cart" :key="meal.id">{{meal.name}} Sh{{meal.price}} quantity: {{meal.quantity}}</li>
-                    <li>Total:{{totalCost}}</li>
+                    <li>Total:{{totalItem}}</li>
                     
                     
-                </ul>
+                </ul> -->
            
             
                 <nav class="nav-wrapper white ">
@@ -44,8 +44,11 @@
                                     <i class="fa fa-github"></i>
                                 </a></li>
                             
-
+<!-- 
                             <li><a v-on:click="showCart=!showCart" class="dropdown-trigger blue btn-floating" href="#!" data-target="dropdown1"><i class="material-icons right black-text">shopping_cart</i></a></li>
+                            <li><span class="badge white-text pink new ">{{totalCart}}</span></li> -->
+
+                            <li><a  class="modal-trigger blue btn-floating" href="#items" ><i class="material-icons right black-text">shopping_cart</i></a></li>
                             <li><span class="badge white-text pink new ">{{totalCart}}</span></li>
                         </ul>
   
@@ -59,6 +62,7 @@
                     
                     
                 </nav>
+              
 
 
    
@@ -88,6 +92,14 @@
 
                 </div>
         </header>
+        <div class="modal" id="items">
+            <ul>
+                    <li class="collection-item" v-for="meal in cart" :key="meal.id">{{meal.name}} Sh{{meal.price}} quantity: {{meal.quantity}}</li>
+                    <li>Total:{{totalItem}}</li>
+                    
+                    
+                </ul>
+        </div>
        
 
         <div class="container meals">
