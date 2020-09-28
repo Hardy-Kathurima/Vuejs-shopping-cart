@@ -92,14 +92,23 @@
 
                 </div>
         </header>
-        <div class="modal" id="items">
-            <ul>
-                    <li class="collection-item" v-for="meal in cart" :key="meal.id">{{meal.name}} Sh{{meal.price}} quantity: {{meal.quantity}}</li>
-                    <li>Total:{{totalItem}}</li>
-                    
-                    
-                </ul>
+        <div class="container">
+            <div class="modal" id="items">
+                <div class="modal-content">
+                    <ul>
+                        <li class="collection-item" v-for="meal in cart" :key="meal.id">{{meal.name}} Sh{{meal.price}} quantity: {{meal.quantity}}</li>
+                        <li>Total:{{totalItem}}</li>
+                        
+                        
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn indigo modal-close" href="#">Continue shopping</a>
+                </div>
+               
+            </div>
         </div>
+       
        
 
         <div class="container meals">
