@@ -22,6 +22,7 @@
                 <nav class="nav-wrapper white ">
                     <div class="container">
                         <ul class="right ">
+                           
                             <li><a class=" teal-text " href="#">Home</a></li>
                             <li><a class=" indigo btn-floating" href="https://github.com/Hardy-Kathurima"
                                     target="_blank">
@@ -30,6 +31,8 @@
                             <li><a class="modal-trigger blue btn-floating" href="#items"><i
                                         class="material-icons right black-text">shopping_cart</i></a></li>
                             <li><span class="badge white-text pink new ">{{totalCart}}</span></li>
+                            <li><span class="indigo-text ">Total:Sh{{totalItem}}</span></li>
+                            
                         </ul>
                     </div>
                 </nav>
@@ -47,12 +50,12 @@
                 </div>
         </header>
         <div class="container">
-            <div class="modal" id="items">
+            <div class="modal " id="items">
                 <div class="modal-content">
                     <ul>
                         <li class="collection-item" v-for="meal in cart" :key="meal.id">{{meal.name}} Sh{{meal.price}}
                             quantity: {{meal.quantity}}</li>
-                        <li>Total:{{totalItem}}</li>
+                        <li class="collection">Total:Sh{{totalItem}}</li>
                     </ul>
                 </div>
                 <div class="modal-footer">
@@ -72,8 +75,9 @@
                             <img v-bind:src="meal.img" alt="">
                         </div>
                         <div class="card-content">
-                            <span class="card-title"> {{meal.name}}</span>
+                            <span class="card-title"> {{meal.name}} sh {{meal.price}}</span>
                             <p>{{meal.detail}}</p>
+                            
                         </div>
                         <div class="card-action">
 
@@ -81,11 +85,11 @@
                             <a @click.prevent="updateCart(meal,'add')" href="#" class="btn blue ">
                                 <i class="material-icons">add</i>
                             </a>
-                            <span>{{meal.quantity}}</span>
-                            <a @click.prevent="updateCart(meal,'subtract')" href="#" class="btn blue ">
-                                <i class="material-icons right">remove</i>
+                            
+                            <a @click.prevent="updateCart(meal,'subtract')" href="#" class="btn pink ">
+                                <i class="material-icons ">remove</i>
                             </a>
-
+                            <span>{{meal.quantity}}</span>
                         </div>
                     </div>
                 </div>

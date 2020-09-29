@@ -5,7 +5,7 @@ const app = new Vue({
       meals: [{
           id: 1,
           name: "Chips",
-          detail: "Tasty chips",
+          detail: "Fresh  fries",
           price: 100,
           img: "../assets/images/chips.jpg",
           quantity: 0,
@@ -13,7 +13,7 @@ const app = new Vue({
         {
           id: 2,
           name: "Chicken",
-          detail: "Tasty chicken",
+          detail: "Grilled chicken",
           price: 350,
           img: "../assets/images/chicken.jpg",
           quantity: 0,
@@ -21,7 +21,7 @@ const app = new Vue({
         {
           id: 3,
           name: "Pizza",
-          detail: "Tasty Pizza",
+          detail: "Pepperoni Pizza",
           price: 600,
           img: "../assets/images/pizza.jpg",
           quantity: 0,
@@ -29,7 +29,7 @@ const app = new Vue({
         {
           id: 4,
           name: "Hamburger",
-          detail: "Tasty Hamburger",
+          detail: "Beef Burger",
           price: 150,
           img: "../assets/images/hamburger.jpg",
           quantity: 0,
@@ -37,7 +37,7 @@ const app = new Vue({
         {
           id: 5,
           name: "Milk shake",
-          detail: "Tasty milk",
+          detail: "Vanilla Ice",
           price: 100,
           img: "../assets/images/milkShake.jpg",
           quantity: 0,
@@ -45,7 +45,7 @@ const app = new Vue({
         {
           id: 6,
           name: "Kebab",
-          detail: "Tasty kebab",
+          detail: "Hara Masala ",
           price: 130,
           img: "../assets/images/kebab.jpg",
           quantity: 0,
