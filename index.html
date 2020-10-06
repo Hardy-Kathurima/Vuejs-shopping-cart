@@ -22,21 +22,21 @@
                 <nav class="nav-wrapper white ">
                     <div class="container">
                         <ul class="right ">
-                           
+
                             <li><a class=" teal-text " href="#">Home</a></li>
                             <li><a class=" indigo btn-floating" href="https://github.com/Hardy-Kathurima"
                                     target="_blank">
                                     <i class="fa fa-github"></i>
                                 </a></li>
-                            <li><a class="modal-trigger blue btn-floating" href="#items"><i
+                            <li><a class="modal-trigger green darken-3 btn-floating" href="#items"><i
                                         class="material-icons right black-text">shopping_cart</i></a></li>
-                            <li><span class="badge white-text pink new ">{{totalCart}}</span></li>
-                            <li><span class="indigo-text ">Total:Sh{{totalItem}}</span></li>
-                            
+                            <li><span class="badge white-text green new ">{{totalCart}}</span></li>
+                            <!-- <li><span class="indigo-text ">Total:Sh{{totalItem}}</span></li> -->
+
                         </ul>
                     </div>
                 </nav>
-                <div class="intro">
+                <div class="intro container">
                     <i class="material-icons">mask</i>
                     <h3>Hardy-Bites </h3><br />
                     <ul>
@@ -77,17 +77,17 @@
                         <div class="card-content">
                             <span class="card-title"> {{meal.name}} sh {{meal.price}}</span>
                             <p>{{meal.detail}}</p>
-                            
+
                         </div>
                         <div class="card-action">
 
 
-                            <a @click.prevent="updateCart(meal,'add')" href="#" class="btn blue ">
-                                <i class="material-icons">add</i>
+                            <a @click.prevent="updateCart(meal,'add')" href="#" class="btn green darken-3 ">
+                                Add to Cart
                             </a>
-                            
-                            <a @click.prevent="updateCart(meal,'subtract')" href="#" class="btn pink ">
-                                <i class="material-icons ">remove</i>
+
+                            <a @click.prevent="updateCart(meal,'subtract')" href="#" class="btn black ">
+                                Remove
                             </a>
                             <span>{{meal.quantity}}</span>
                         </div>
